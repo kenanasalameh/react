@@ -1,0 +1,153 @@
+.footer {
+  background-color: var(--over--color);
+  min-height: 400px;
+  position: relative;
+  z-index: 1;
+  margin-left: 40px;
+}
+.btn-top {
+  width: 46px;
+  height: 46px;
+  margin-top: -25px;
+  opacity: 1;
+  border-radius: 19.93px;
+  background: var( --light--brown);
+  border: none;
+  float: inline-end;
+  color: white;
+}
+
+.p1 {
+  font-weight: bold;
+  font-size: 11px;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+  margin-bottom: 4px;
+  cursor: default;
+}
+
+.p2 {
+  margin-left: 20px;
+  font-size: 11px;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+  color: rgb(121, 120, 120);
+  cursor: default;
+}
+
+.span1 {
+  display: block;
+  width: 15%;
+  height: 1px;
+  background-color:var( --light--brown);
+}
+
+.ul1 li {
+  margin-top: 24px;
+  list-style: none;
+  line-height: 1px;
+  font-size: 11px;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+  margin-left: -35px;
+  color: rgb(121, 120, 120);
+  cursor: default;
+}
+
+#ul1 li {
+  cursor: pointer;
+}
+
+#div2 {
+  margin-left: -80px;
+}
+
+#div3 {
+  width: 300px;
+  margin-left: -80px;
+}
+
+#div4 {
+  width: 270px;
+}
+
+.ul1 li i {
+  color:var(  --bg--nav);
+}
+
+.img {
+  width: 180px;
+  margin-top: 45px;
+}
+
+  .div-img img{
+    width: 25px;
+    margin-left: 20px;
+
+  }
+
+.hr {
+  color: rgba(173, 173, 173, 0.945);
+}
+
+#div-f,
+#div-f1 {
+  font-size: 11px;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+  color: rgb(121, 120, 120);
+  cursor: default;
+}
+
+#div-f1 {
+  padding-right: 100px;
+}
+.insta{
+  width: 20px;
+}
+
+@media (max-width: 1197px) {
+  #div3 {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1117px) {
+  #div3 {
+    margin-left: 2px;
+  }
+}
+
+@media (max-width: 440px) {
+  .f {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .img {
+    margin: 20px auto;
+  }
+
+  .div-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0;
+  }
+  
+  #div3 {
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 325px) {
+  .img {
+    width: 150px;
+  }
+
+  .div-img {
+    gap: 4px;
+  }
+}

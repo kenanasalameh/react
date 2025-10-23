@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --bg--color: #fff;
+  --bg--secondary:#fbfbfb;
+  --bg--nav:rgba(0, 59, 113, 1);
+  --mark--color:rgba(55, 90, 128, 1);
+  --dark--color:rgba(40, 46, 51, 1);
+  --light--dark:rgba(50, 55, 58, 1);
+  --light--blue:rgba(169, 203, 236, 1);
+  --light--brown:rgba(180, 162, 105, 1);
+  --liner--blue:rgba(29, 154, 221, 1);
+  --box1--color:rgba(181, 162, 105, 1);
+  --box2--color:rgba(254, 197, 45, 1);
+  --box3--color:rgba(194, 220, 118, 1);
+  --box4--color:rgba(127, 37, 41, 1);
+  --box5--color:rgba(174, 183, 191, 1);
+  --box6--color:rgba(100, 40, 111, 1);
+  --box7--color:rgba(72, 159, 153, 1);
+  --box8--color:rgba(120, 83, 55, 1);
+  --liner--after:rgba(66, 66, 66, 1);
+  --over--color:rgba(255, 255, 255, 0.8);
+  --cont--color: rgba(45, 45, 45, 0.7);
+  --placeholder--color:rgba(121, 126, 134, 1);
+}
+body {
+  font-family: 'Helvetica LT Std', Helvetica, Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

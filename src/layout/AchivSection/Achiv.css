@@ -1,0 +1,171 @@
+.achiv-sec {
+  min-height: 300px;
+  background-image: url("../../asset/vec.jpg");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  margin-top: 5%;
+  margin-left: 10%;
+  position: relative;
+}
+
+.achiv-h {
+  margin-top: 45px;
+  font-size: 70px;
+  font-weight: bold;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: rgba(153, 152, 151, 0.12);
+  position: relative;
+}
+
+.achiv-h1 h1 {
+  font-size: 40px;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+  margin-left: 10px;
+  font-weight: bold;
+  padding-left: 40px;
+  position: absolute;
+  z-index: 10;
+  margin-top: -70px;
+}
+
+.hidden-init {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.hidden-left,
+.hidden-right {
+  opacity: 0;
+}
+
+.hidden-left {
+  transform: translateX(-40px);
+}
+.hidden-right {
+  transform: translateX(40px);
+}
+
+.fade-left,
+.fade-right,
+.fade-left-delay,
+.fade-right-delay {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 0.9s ease;
+}
+
+.fade-left-delay {
+  transition-delay: 0.3s;
+}
+.fade-right-delay {
+  transition-delay: 0.5s;
+}
+
+.fade-only-init {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.fade-only-active {
+  opacity: 1;
+}
+
+.vec1 {
+  background-color: white;
+  margin-left: -12px;
+  width: 50px;
+  margin-top: -20px;
+}
+.vec2 {
+  background-color: white;
+  margin-left: 50px;
+  margin-top: -20px;
+  width: 40px;
+}
+.vec3 {
+  background-color: white;
+  margin-left: 20px;
+  margin-top: -20px;
+  width: 50px;
+}
+.vec4 {
+  width: 60px;
+  margin-left: -70px;
+  margin-top: -40px;
+}
+.vec5 {
+  width: 60px;
+  margin-left: -70px;
+  margin-top: -60px;
+}
+.vec6 {
+  margin-left: -50px;
+  margin-top: -50px;
+  width: 50px;
+}
+.vec7 {
+  margin-left: -50px;
+  margin-top: -30px;
+  width: 40px;
+}
+.vec8 {
+  margin-left: 2px;
+  margin-top: -20px;
+  width: 40px;
+}
+.vec9 {
+  width: 50px;
+  margin-left: -70px;
+  margin-top: -40px;
+}
+.vec10 {
+  background-color: white;
+  width: 50px;
+  margin-top: -20px;
+  margin-left: 90px;
+}
+.vec11 {
+  width: 60px;
+  margin-left: -70px;
+  margin-top: -40px;
+}
+#t1 {
+  margin-left: -200px !important;
+}
+
+#t3 {
+  margin-right: 55px;
+  margin-left: 65px;
+}
+#t3 h6,
+#t1 h6,
+#t2 h6 {
+  font-size: small;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+}
+.r {
+  font-weight: bold !important;
+  font-size: large !important;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+}
+#t1 h6 span,
+#t2 h6 span,
+#t3 h6 span,
+#w1 h6 span,
+#w2 h6 span {
+  font-size: 20px !important;
+  color: var(--dark--color);
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+}
+.w {
+  margin-left: 40px;
+  text-align: center;
+}
+#w2 {
+  margin-right: 50px;
+  margin-left: 50px;
+}

@@ -1,0 +1,125 @@
+.serv {
+  background-color: var(--over--color);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  position: absolute;
+  z-index: 1;
+  margin-top: -60px;
+  width: 95%;
+  margin-left: 2.5%;
+  min-height: 500px;
+}
+
+.sec-serv {
+  min-height: 300px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.sec-serv.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.serv-h {
+  margin-top: 45px;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+  font-size: 70px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgba(153, 152, 151, 0.12);
+  position: relative;
+}
+
+.serv-h1 h1 {
+  font-size: 40px;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+  margin-left: 10px;
+  font-weight: bold;
+  padding-left: 40px;
+  position: absolute;
+  z-index: 10;
+  margin-top: -70px;
+}
+
+#serv-btn {
+  margin-top: 30px;
+}
+
+.view-all-btn {
+  font-size: small;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+  background-color: white;
+  border: none;
+}
+
+.box-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.animated-box {
+  position: relative;
+  width: 250px;
+  height: 140px;
+  padding: 20px 20px 20px 30px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease, background-size 0.4s ease;
+}
+
+.animated-box:hover {
+  background-size: 120%;
+}
+
+.box-bar {
+  position: absolute;
+  left: 0;
+  top: 25%;
+  width: 6px;
+  height: 50%;
+  border-radius: 3px;
+  transition: height 0.4s ease, top 0.4s ease;
+}
+
+.animated-box:hover .box-bar {
+  height: 60%;
+  top: 20%;
+}
+
+.box-content h4 {
+  margin-top: 15%;
+  margin-right: 20%;
+  font-size: 18px;
+  color: var(--dark--color);
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  transition: margin-left 0.9s;
+}
+
+.box-content p {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+  color: var(--dark--color);
+  margin-top: -10px;
+  transition: margin-left 0.9s;
+}
+
+.animated-box:hover h4,
+.animated-box:hover p {
+  margin-left: 20px;
+}
