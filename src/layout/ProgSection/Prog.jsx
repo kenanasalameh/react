@@ -23,7 +23,7 @@ export default function Prog() {
       <div className="row justify-content-between align-items-center">
         <div className="col-md-8 col-12">
           <div className="prog-h">
-            <span style={{ display: "inline-block", minWidth: "100px" }}>
+            <span className="typewriter-wrapper">
               <Typewriter
                 words={["PROGRAM"]}
                 loop={0}

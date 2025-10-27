@@ -6,58 +6,65 @@ import instagram from "../../asset/instagram.jpg";
 import twitterl from "../../asset/twitterl.jpg";
 import youtubel from "../../asset/youtubel.jpg";
 import "../../App.css";
-import "./Contact.css";
+import './Contact.css'
 
 export default function Contact() {
+  const [hasBeenHovered, setHasBeenHovered] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [hovered, setHovered] = useState(false);
 
   const handleMouseEnter = () => {
-    if (!hovered) setHovered(true);
+    if (!hasBeenHovered) {
+      setHasBeenHovered(true);
+      setTimeout(() => {
+        setIsVisible(true);
+      }, 300);
+    }
   };
 
   return (
-    <div
-      className="contact-sec"
-      onMouseEnter={handleMouseEnter}
-      style={{ position: "relative", overflow: "hidden" }}
-    >
-      {hovered && (
-        <>
+    <div className="cont"    onMouseEnter={() => {
+        handleMouseEnter();
+        if (!hovered) setHovered(true);
+      }}>
+     {hovered && (
+        <div className="bg">
           <div className="bg-left"></div>
           <div className="bg-right"></div>
-        </>
+        </div>
       )}
+    
+    <div
+      className="container"
+      id="contactus"
+   
+    >
+ 
 
-      <div
-        className="contact"
-        style={{ minHeight: "40px", position: "absolute", zIndex: 0 }}
-      >
-        <span style={{ display: "inline-block", minWidth: "100px" }}>
-          <Typewriter
-            words={["contact"]}
-            loop={0}
-            typeSpeed={150}
-            deleteSpeed={150}
-            cursor
-            cursorStyle=""
-          />
-        </span>
-      </div>
-      <div className="contactus">
-        <p>Contact Us</p>
+      <div className="row justify-content-between align-items-center">
+        <div className="col-md-8 col-12">
+          <div className="contact-h">
+            <span className="typewriter-wrapper">
+              <Typewriter
+                words={["CONTACT"]}
+                loop={0}
+                typeSpeed={150}
+                deleteSpeed={150}
+                cursor
+                cursorStyle=""
+              />
+            </span>
+          </div>
+          <div className="contact-h1">
+            <h1>Contact Us</h1>
+          </div>
+        </div>
       </div>
 
-      <div className="layout1" style={{ position: "relative", zIndex: 10 }}>
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <div className="left">
-                <div
-                  className={`contact-left rounded ${
-                    hovered ? "slide-down-left" : "hidden"
-                  }`}
-                >
-                  <div class="row">
+      <div className="row contact-section">
+        <div className="col-md-7 col-12">
+          <div className={`left-content ${isVisible ? "visible" : ""}`}>
+              <div class="row">
                     <div class="col-4">
                       <div className="div-img-contact">
                         <img src={instagram} alt="insta" />
@@ -67,16 +74,14 @@ export default function Contact() {
                       </div>
                     </div>
                     <div class="col-8">
-                      <img src={imgc} alt="image" />
+                      <img src={imgc} alt="image" className="imgc" />
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="container"></div>
-            </div>
+          </div>
+        </div>
 
-            <div className="col">
-              <div className="right">
+        <div className="col-md-5 col-12">
+           <div className={`right-content ${isVisible ? "visible" : ""}`}>
                 <p
                   className={`p1-cont animate-slide-up ${
                     hovered ? "visible" : ""
@@ -149,10 +154,9 @@ export default function Contact() {
                   Subscribe
                 </button>
               </div>
-            </div>
-          </div>
+        </div>
         </div>
       </div>
-    </div>
+ </div>
   );
 }

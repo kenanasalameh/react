@@ -149,6 +149,22 @@
   height: auto;
   display: block;
 }
+@media (max-width:1199px) {
+
+#aboutus{
+  margin-top: 35rem;
+}
+
+
+}
+@media (max-width:991px) {
+
+#aboutus{
+  margin-top: 45rem;
+}
+
+
+}
 @media (max-width:768px) {
 
 .img-fluid{
@@ -156,3 +172,10 @@
 }
 
 }
+@media (max-width:767px) {
+
+#aboutus{
+  margin-top: 90rem;
+}
+}
+

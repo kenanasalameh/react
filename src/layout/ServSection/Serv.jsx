@@ -96,7 +96,7 @@ export default function Serv() {
         <div className="row justify-content-between align-items-center">
           <div className="col-md-8 col-12">
             <div className="serv-h">
-              <span style={{ display: "inline-block", minWidth: "100px" }}>
+              <span className="typewriter-wrapper">
                 <Typewriter
                   words={["SERVICES"]}
                   loop={0}
@@ -126,22 +126,8 @@ export default function Serv() {
           <div className="hover-section">
             <div className="box-grid show">
               {boxes.map((box) => (
-                <div
-                  key={box.id}
-                  className="animated-box"
-                  style={{
-                    border: `2px solid ${box.borderColor}`,
-                    backgroundColor: box.backgroundColor,
-                    backgroundImage: box.backgroundImage,
-                    backgroundPosition: "center",
-                    color: "#fff",
-                    fontWeight: "bold",
-                  }}
-                >
-                  <span
-                    className="box-bar"
-                    style={{ backgroundColor: box.borderColor }}
-                  ></span>
+                <div key={box.id} className={`animated-box box-${box.id}`}>
+                  <span className="box-bar"></span>
                   <div className="box-content">
                     <h4>{box.title}</h4>
                     <p>{box.description}</p>
