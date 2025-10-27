@@ -169,3 +169,31 @@
   margin-right: 50px;
   margin-left: 50px;
 }
+@media (max-width:1199px) {
+#t1 h6 ,#t3 h6,#t2 h6{
+ margin-left: 3rem;
+}
+}
+@media (max-width:991px) {
+#t1 h6 ,#t3 h6,#t2 h6{
+ margin-left: 7rem;
+}
+#t1 h6 span ,#t3 h6 span,#t2 h6 span{
+  font-size: small !important;
+  font-weight: bolder !important;
+}
+#t1 h6 .r,#t3 h6 .r ,#t2 h6 .r{
+   font-weight: bold !important;
+   font-size: small !important;
+}
+#w1 h6 span ,#w2 h6 span{
+  font-size: small !important;
+  font-weight: bolder !important;
+}
+#w1 h6 .r,#w2 h6 .r{
+   font-weight: bold !important;
+   font-size: small !important;
+}
+ 
+}
+

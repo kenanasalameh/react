@@ -101,4 +101,50 @@
 .insta{
   width: 20px;
 }
+@media (max-width:1199px) {
+  .youtube{
+    margin-top:12px;
+  }
+}
+@media (max-width:992px) {
+#div3{
+
+margin-left: 2px;
+ }
+ #div4{
+
+margin-left: -3.5rem;
+ }
+}
+@media (max-width:767px) {
+#div3{
+
+margin-left: 2px;
+ }
+ #div4{
+
+margin-left: 0.2rem;
+ }
+}
+@media (max-width:440px) {
+#div2{
+margin-left: 0px;
+ }
+
+}
+@media (max-width:374px) {
+#trc{
+ width: 120px;
+ }
+ #appn{
+  width: 500px;
+ }
+ #sop{
+  width: 120px;
+ }
+ #abut{
+  line-height: 15px;
+ }
+
+}
 

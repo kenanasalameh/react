@@ -27,7 +27,7 @@ const Footer = () => {
                 <li>Media Center</li>
                 <li>Open Data</li>
                 <li>Publications</li>
-                <li>Social Programs</li>
+                <li id='sop'>Social Programs</li>
               </ul>
             </div>
           </div>
@@ -39,7 +39,7 @@ const Footer = () => {
               <span className="span1"></span>
               <ul className="ul1" id="ul1">
                 <li>Contact Us</li>
-                <li>Terms & Conditions</li>
+                <li id='trc'>Terms & Conditions</li>
                 <li>Privacy Policy</li>
                 <li>Sitemap</li>
                 <li>FAQ</li>
@@ -55,7 +55,7 @@ const Footer = () => {
               <ul className="ul1" id="ul1">
                 <li>Training Request</li>
                 <li>Advisor Initiative in Each Family</li>
-                <li>Register Members of the Nawait Initiative</li>
+                <li id='appn'>Register Members of the Nawait Initiative</li>
               </ul>
             </div>
           </div>
@@ -68,7 +68,7 @@ const Footer = () => {
               <ul className="ul1">
                 <li><i className="bi bi-geo-alt-fill"></i>&nbsp; Abu Dhabi, Al Ain, Al Dhafra</li>
                 <li><i className="bi bi-envelope-fill"></i>&nbsp; info@fdf.gov.ae</li>
-                <li><i className="bi bi-telephone-fill"></i>&nbsp; Abu Dhabi Contact Center:800&nbsp;555</li>
+                <li id='abuc'><i className="bi bi-telephone-fill"></i>&nbsp; Abu Dhabi Contact Center:800&nbsp;555</li>
               </ul>
               <p className="p2">
                 Family Call Center: 80033322<br />
@@ -87,7 +87,7 @@ const Footer = () => {
                 <img src={face} alt="" />
                 <img src={instagram} alt="" className='insta' />
                 <img src={twitter} alt="" />
-                <img src={youtube} alt="" />
+                <img src={youtube} alt=""  className='youtube'/>
           
               </div>
             </div>

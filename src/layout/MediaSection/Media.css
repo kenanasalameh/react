@@ -93,9 +93,10 @@
     border-radius: 20px; 
 }
 
+
 .right-section {
     padding: 30px;
-    margin-left: -10%;
+    margin-left: -15%;
     display: none;
     animation: fadeIn 0.5s ease-in-out forwards;
 }
@@ -261,15 +262,11 @@
     font-size: 0.95rem;
     color: #333;
 }
-
-@media (max-width: 1272px),
-       (max-width: 1252px),
-       (max-width: 1025px),
-       (max-width: 1014px),
-       (max-width: 992px),
-       (max-width: 960px),
-       (max-width: 768px) {
-    .grid-container {
-        flex-wrap: wrap;
-    }
+@media (max-width:1440px) {
+   .left-item ,  .left-item.active{
+    margin-left: 20px;
+   } 
+  
 }
+
+

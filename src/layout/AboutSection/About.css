@@ -1,5 +1,5 @@
-#aboutus {
-  margin-top: 30%;
+#aboutus{
+  margin-top: 25rem;
 }
 
 .about-h {
@@ -22,6 +22,11 @@
   z-index: 10;
   margin-top: -70px;
 }
+.typewriter-wrapper {
+  display: inline-block;
+  min-width: 100px;
+}
+
 
 #media-
 
@@ -144,4 +149,10 @@
   height: auto;
   display: block;
 }
-  
+@media (max-width:768px) {
+
+.img-fluid{
+ margin-top: 5rem;
+}
+
+}

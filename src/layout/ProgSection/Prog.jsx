@@ -42,7 +42,7 @@ export default function Prog() {
       </div>
 
       <div className="row prog-section">
-        <div className="col-md-7 col-12">
+        <div className="col-md-6 col-12">
           <div
             className={`prog-content ${
               showProg ? "fade-left fade-left-delay" : "hidden-left"
@@ -89,7 +89,7 @@ export default function Prog() {
           </div>
         </div>
 
-        <div className="col-md-5 col-12">
+        <div className="col-md-6 col-12">
           <div className="prog-img-wrapper">
             <img
               src={imagp}

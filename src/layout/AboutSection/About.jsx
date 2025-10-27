@@ -24,7 +24,7 @@ export default function About() {
       <div className="row justify-content-between align-items-center">
         <div className="col-md-8 col-12">
           <div className="about-h">
-            <span style={{ display: "inline-block", minWidth: "100px" }}>
+          <span className="typewriter-wrapper">
               <Typewriter
                 words={["ABOUT US"]}
                 loop={0}
@@ -84,7 +84,7 @@ export default function About() {
         <div className="col-md-5 col-12">
           <div
             className={`about-image ${isVisible ? "visible" : ""}`}
-            style={{ position: "relative" }}
+     
           >
             <img src={chrabout} alt="About" className="img-fluid rounded" />
             <div className="about-image-text">

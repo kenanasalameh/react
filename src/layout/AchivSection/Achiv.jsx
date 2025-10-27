@@ -68,7 +68,7 @@ const Achiv = () => {
       <div className="row justify-content-between align-items-center">
         <div className="col-md-8 col-12">
           <div className="achiv-h">
-            <span style={{ display: "inline-block", minWidth: "100px" }}>
+            <span className="typewriter-wrapper">
               <Typewriter
                 words={["ACHIEVEMENTS"]}
                 loop={0}
@@ -193,7 +193,7 @@ const Achiv = () => {
                 Total Number of
                 <br />
                 <span className="r">
-                  {" "}
+                
                   Research and Studies
                   <br />
                   <span>46</span>
@@ -203,7 +203,7 @@ const Achiv = () => {
           </div>
         </div>
         <div className="w">
-          <div class="containertext-center">
+          <div class="container text-center">
             <div class="row">
               <div
                 class={`col-4 ${
@@ -215,7 +215,7 @@ const Achiv = () => {
                   Total Number of
                   <br />
                   <span className="r">
-                    {" "}
+                  
                     Services
                     <br />
                     <span>25</span>
@@ -234,7 +234,7 @@ const Achiv = () => {
                   Total Number of
                   <br />
                   <span className="r">
-                    {" "}
+               
                     Consultation Provided
                     <br />
                     <span>63</span>

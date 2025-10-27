@@ -364,7 +364,7 @@ export default function Media() {
                 {selectedTitle !== "News" &&
                   selectedTitle !== "Events" &&
                   data.map((d, i) => (
-                    <div key={i} className="grid-item">
+                    <div key={i} className="grid-item" >
                       <div className="watermark">{d.watermark}</div>
                       <img src={d.image} alt={d.watermark} />
                       <p className="faint-text">{d.faintText}</p>

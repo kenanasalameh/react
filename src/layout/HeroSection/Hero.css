@@ -53,19 +53,17 @@ p {
   letter-spacing: -7px;
 }
 .carousel-indicators {
-  bottom: 9rem !important;
+  top:21.2rem !important ;
   left: -71rem !important;
   position: absolute;
   z-index: 1;
 }
-.carousel-indicators button {
-  background-color: var(--liner--blue) !important;
-}
+
 .carousel-indicators button {
   width: 3px !important;
   height: 3px !important;
   border-radius: 50%;
-  background-color: gray;
+  background-color: var(--liner--blue) !important;
   transition: all 0.3s;
 }
 .carousel-indicators button [data-bs-slide-to="0"] {
@@ -101,3 +99,10 @@ p {
 .icond {
   margin-top: 13%;
 }
+
+
+
+
+
+
+
