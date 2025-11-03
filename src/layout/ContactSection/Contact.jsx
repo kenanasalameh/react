@@ -69,8 +69,8 @@ export default function Contact() {
                       <div className="div-img-contact">
                         <img src={instagram} alt="insta" />
                         <img src={facel} alt="facebook" id="imgl" />
-                        <img src={youtubel} alt="youtube" className="imgl" />
-                        <img src={twitterl} alt="twitter" className="imgl" />
+                        <img src={youtubel} alt="youtube" className="imgl" id="y" />
+                        <img src={twitterl} alt="twitter" className="imgl"  id="twi"/>
                       </div>
                     </div>
                     <div class="col-8">

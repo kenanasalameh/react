@@ -45,6 +45,7 @@
 .hidden-left {
   transform: translateX(-40px);
 }
+
 .hidden-right {
   transform: translateX(40px);
 }
@@ -61,6 +62,7 @@
 .fade-left-delay {
   transition-delay: 0.3s;
 }
+
 .fade-right-delay {
   transition-delay: 0.5s;
 }
@@ -74,84 +76,143 @@
   opacity: 1;
 }
 
+
 .vec1 {
   background-color: white;
-  margin-left: -12px;
-  width: 50px;
-  margin-top: -20px;
+  margin-left: 2rem;
+  width: 3rem;
+  margin-top: 2px;
 }
+
 .vec2 {
   background-color: white;
-  margin-left: 50px;
-  margin-top: -20px;
-  width: 40px;
+  width: 2.5rem;
+  margin-top: 2rem;
 }
+
 .vec3 {
   background-color: white;
-  margin-left: 20px;
-  margin-top: -20px;
-  width: 50px;
+  margin-left: -2rem;
+  width: 3rem;
 }
+
 .vec4 {
-  width: 60px;
-  margin-left: -70px;
-  margin-top: -40px;
+  width: 3rem;
+  margin-left: -3rem;
+  margin-top: -3rem;
 }
+
 .vec5 {
-  width: 60px;
-  margin-left: -70px;
-  margin-top: -60px;
+  width: 3rem;
+  margin-top: -4rem;
+  margin-left: -1rem;
 }
+
 .vec6 {
-  margin-left: -50px;
-  margin-top: -50px;
-  width: 50px;
+  margin-top: -3rem;
+  width: 3rem;
+  margin-left: -1rem;
 }
+
 .vec7 {
-  margin-left: -50px;
-  margin-top: -30px;
-  width: 40px;
+  margin-top: -3.5rem;
+  margin-left: -0.7rem;
+  width: 2.5rem;
 }
+
 .vec8 {
-  margin-left: 2px;
-  margin-top: -20px;
-  width: 40px;
+  margin-top: 2rem;
+  width: 2.5rem;
 }
+
 .vec9 {
-  width: 50px;
-  margin-left: -70px;
-  margin-top: -40px;
+  margin-left: 1rem;
+  width: 3rem;
+  margin-top: -3rem;
 }
+
 .vec10 {
   background-color: white;
-  width: 50px;
-  margin-top: -20px;
-  margin-left: 90px;
+  width: 3rem;
+  margin-top: -0.2rem;
+  margin-left: -2rem;
 }
+
 .vec11 {
-  width: 60px;
-  margin-left: -70px;
-  margin-top: -40px;
+  width: 3rem;
+  margin-left: -3rem;
+  margin-top: -3.3rem;
 }
+
 #t1 {
-  margin-left: -200px !important;
+  margin-top: 2rem;
+}
+
+#h6 {
+  margin-left: -4rem;
+}
+
+#h6 span {
+  margin-left: -2rem !important;
+}
+
+#h6 span span {
+  margin-left: 2rem !important;
 }
 
 #t3 {
-  margin-right: 55px;
-  margin-left: 65px;
+  margin-left: -4rem;
+  margin-top: 2rem;
 }
+
+#t3 h6 {
+  width: 15rem;
+}
+
 #t3 h6,
 #t1 h6,
+#w1 h6,
+#w2 h6,
 #t2 h6 {
   font-size: small;
   font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
 }
+
+
 .r {
   font-weight: bold !important;
   font-size: large !important;
   font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+  margin-left: 0.6rem;
 }
+
+.r span {
+  margin-left: 1.5rem;
+}
+
+.r1 {
+  font-weight: bold !important;
+  font-size: large !important;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+  margin-left: -5rem;
+}
+
+.r1 span {
+  margin-left: 1.5rem;
+}
+
+.r2 {
+  font-weight: bold !important;
+  font-size: xx-small !important;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
+  margin-left: -4rem;
+}
+
+.r2 span {
+  margin-left: 2rem;
+}
+
+
 #t1 h6 span,
 #t2 h6 span,
 #t3 h6 span,
@@ -161,39 +222,54 @@
   color: var(--dark--color);
   font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
 }
-.w {
-  margin-left: 40px;
-  text-align: center;
-}
-#w2 {
-  margin-right: 50px;
-  margin-left: 50px;
-}
-@media (max-width:1199px) {
-#t1 h6 ,#t3 h6,#t2 h6{
- margin-left: 3rem;
-}
-}
-@media (max-width:991px) {
-#t1 h6 ,#t3 h6,#t2 h6{
- margin-left: 7rem;
-}
-#t1 h6 span ,#t3 h6 span,#t2 h6 span{
-  font-size: small !important;
-  font-weight: bolder !important;
-}
-#t1 h6 .r,#t3 h6 .r ,#t2 h6 .r{
-   font-weight: bold !important;
-   font-size: small !important;
-}
-#w1 h6 span ,#w2 h6 span{
-  font-size: small !important;
-  font-weight: bolder !important;
-}
-#w1 h6 .r,#w2 h6 .r{
-   font-weight: bold !important;
-   font-size: small !important;
-}
- 
+
+
+#w1 {
+  margin-left: -3rem;
+  margin-top: 5rem;
 }
 
+#w1 h6 {
+  width: 15rem;
+}
+
+#w1 h6 span span {
+  margin-left: 2rem;
+}
+
+#w2 {
+  margin-left: -3rem;
+  margin-top: 5rem;
+}
+
+#w2 h6 {
+  width: 15rem;
+}
+
+#w2 h6 span {
+  margin-left: -3rem;
+}
+
+#w2 h6 span span {
+  margin-left: 2rem;
+}
+@media (max-width:768px) {
+.vec6 {
+margin-top: -2.5rem;
+
+}
+.vec8 {
+margin-top: -0.1rem;
+
+}
+.vec2 {
+margin-top: -0.1rem;
+
+}
+.vec5 {
+margin-top: -3rem;
+
+}
+
+  
+}

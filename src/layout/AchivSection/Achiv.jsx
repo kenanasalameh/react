@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import "./Achiv.css";
 import "../../App.css";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 import vec1 from "../../asset/vec1.jpg";
 import vec2 from "../../asset/vec2.jpg";
@@ -17,6 +19,29 @@ import vec10 from "../../asset/vec10.jpg";
 import vec11 from "../../asset/vec11.jpg";
 
 const Achiv = () => {
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    responsive: [
+          {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
+  };
   setTimeout(() => {
     const counters = document.querySelectorAll(".albateen-statistics");
     const speed = 300;
@@ -92,157 +117,164 @@ const Achiv = () => {
         onMouseEnter={handleMouseEnter}
       >
         <div className="container">
-          <div className="row">
-            <div
-              className={`col ${
-                showAchievements ? "fade-left fade-left-delay" : "hidden-left"
-              }`}
-            >
-              <img src={vec1} className="vec1" alt="vec1" />
-              <img src={vec9} className="vec9" alt="vec9" />
-            </div>
-
-            <div className="col">
-              <img
-                src={vec3}
-                className={`vec3 fade-only-init ${
-                  showAchievements ? "fade-only-active" : ""
-                }`}
-              />
-              <img
-                src={vec4}
-                className={`vec4 fade-only-init ${
-                  showAchievements ? "fade-only-active" : ""
-                }`}
-              />
-            </div>
-
-            <div
-              className={`col ${
-                showAchievements
-                  ? "fade-right fade-right-delay"
-                  : "hidden-right"
-              }`}
-            >
-              <img src={vec10} className="vec10" alt="vec10" />
-              <img src={vec11} className="vec11" alt="vec11" />
-            </div>
-          </div>
-
-          <div className="row justify-content-center">
-            <div
-              className={`col-4 ${
-                showAchievements ? "fade-left fade-left-delay" : "hidden-left"
-              }`}
-            >
-              <img src={vec8} className="vec8" alt="vec8" />
-              <img src={vec7} className="vec7" alt="vec7" />
-              <img src={vec6} className="vec6" alt="vec6" />
-            </div>
-            <div
-              className={`col-4 ${
-                showAchievements
-                  ? "fade-right fade-right-delay"
-                  : "hidden-right"
-              }`}
-            >
-              <img src={vec2} className="vec2" alt="vec2" />
-              <img src={vec5} className="vec5" alt="vec5" />
-            </div>
-          </div>
-        </div>
-
-        <div class="container text-center" id="achiv-cont">
-          <div class="row">
-            <div
-              class={`col ${
-                showAchievements ? "fade-left fade-left-delay" : "hidden-left"
-              }`}
-              id="t1"
-            >
-              <h6>
-                Total Number of
-                <br />
-                <span className="r">
-                  Clients
-                  <br />
-                  <span>1532</span>
-                </span>
-              </h6>
-            </div>
-            <div class="col" id="t2">
-              <h6>
-                Total Number of
-                <br />
-                <span className="r">
-                  Services Proviced
-                  <br />
-                  <span>283</span>
-                </span>
-              </h6>
-            </div>
-            <div
-              class={`col-4 ${
-                showAchievements
-                  ? "fade-right fade-right-delay"
-                  : "hidden-right"
-              }`}
-              id="t3"
-            >
-              <h6>
-                Total Number of
-                <br />
-                <span className="r">
-                
-                  Research and Studies
-                  <br />
-                  <span>46</span>
-                </span>
-              </h6>
-            </div>
-          </div>
-        </div>
-        <div className="w">
-          <div class="container text-center">
-            <div class="row">
+          <Slider {...sliderSettings}>
+            <div>
+              {" "}
               <div
-                class={`col-4 ${
+                className={`col ${
                   showAchievements ? "fade-left fade-left-delay" : "hidden-left"
                 }`}
-                id="w1"
               >
-                <h6>
-                  Total Number of
-                  <br />
-                  <span className="r">
-                  
-                    Services
+                <img src={vec1} className="vec1" alt="vec1" />
+                <img src={vec9} className="vec9" alt="vec9" />
+                <div
+                  class={`col ${
+                    showAchievements
+                      ? "fade-left fade-left-delay"
+                      : "hidden-left"
+                  }`}
+                  id="t1"
+                >
+                  <h6>
+                    Total Number of
                     <br />
-                    <span>25</span>
-                  </span>
-                </h6>
+                    <span className="r">
+                      Clients
+                      <br />
+                      <span>1532</span>
+                    </span>
+                  </h6>
+                </div>
               </div>
+            </div>
+
+            <div>
               <div
-                class={`col-4 ${
+                className={`col-4 ${
+                  showAchievements ? "fade-left fade-left-delay" : "hidden-left"
+                }`}
+              >
+                <img src={vec8} className="vec8" alt="vec8" />
+                <img src={vec7} className="vec7" alt="vec7" />
+                <img src={vec6} className="vec6" alt="vec6" />
+                <div
+                  class={`col-4 ${
+                    showAchievements
+                      ? "fade-left fade-left-delay"
+                      : "hidden-left"
+                  }`}
+                  id="w1"
+                >
+                  <h6>
+                    Total Number of
+                    <br />
+                    <span className="r">
+                      Services
+                      <br />
+                      <span>25</span>
+                    </span>
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <div>
+              {" "}
+              <div className="col">
+                <img
+                  src={vec3}
+                  className={`vec3 fade-only-init ${
+                    showAchievements ? "fade-only-active" : ""
+                  }`}
+                />
+                <img
+                  src={vec4}
+                  className={`vec4 fade-only-init ${
+                    showAchievements ? "fade-only-active" : ""
+                  }`}
+                />
+                <div
+                  class={`col ${
+                    showAchievements
+                      ? "fade-left fade-left-delay"
+                      : "hidden-left"
+                  }`}
+                  id="t1"
+                >
+                  <h6 id="h6">
+                    Total Number of
+                    <br />
+                    <span className="r1">
+                      Services Proviced
+                      <br />
+                      <span>283</span>
+                    </span>
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                className={`col-4 ${
                   showAchievements
                     ? "fade-right fade-right-delay"
                     : "hidden-right"
                 }`}
-                id="w2"
               >
-                <h6>
-                  Total Number of
-                  <br />
-                  <span className="r">
-               
-                    Consultation Provided
+                <img src={vec2} className="vec2" alt="vec2" />
+                <img src={vec5} className="vec5" alt="vec5" />
+                <div
+                  class={`col-4 ${
+                    showAchievements
+                      ? "fade-right fade-right-delay"
+                      : "hidden-right"
+                  }`}
+                  id="w2"
+                >
+                  <h6>
+                    Total Number of
                     <br />
-                    <span>63</span>
-                  </span>
-                </h6>
+                    <span className="r">
+                      Consultation Provided
+                      <br />
+                      <span>63</span>
+                    </span>
+                  </h6>
+                </div>
               </div>
             </div>
-          </div>
+
+            <div>
+              {" "}
+              <div
+                className={`col ${
+                  showAchievements
+                    ? "fade-right fade-right-delay"
+                    : "hidden-right"
+                }`}
+              >
+                <img src={vec10} className="vec10" alt="vec10" />
+                <img src={vec11} className="vec11" alt="vec11" />
+                <div
+                  class={`col-4 ${
+                    showAchievements
+                      ? "fade-right fade-right-delay"
+                      : "hidden-right"
+                  }`}
+                  id="t3"
+                >
+                  <h6>
+                    Total Number of
+                    <br />
+                    <span className="r2">
+                      Research and Studies
+                      <br />
+                      <span>46</span>
+                    </span>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </Slider>
         </div>
       </div>
     </div>

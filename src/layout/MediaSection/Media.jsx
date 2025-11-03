@@ -1,6 +1,8 @@
-import React, { useState, useRef } from "react";
-import { Typewriter } from "react-simple-typewriter";
-import "./Media.css";
+import React, { useState , useEffect} from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 import imgv1 from "../../asset/imgv1.jpg";
 import imgv2 from "../../asset/imgv2.jpg";
@@ -15,368 +17,394 @@ import imgg2 from "../../asset/imgg2.jpg";
 import imgg3 from "../../asset/imgg3.jpg";
 import imgg4 from "../../asset/imgg4.jpg";
 
-const contentData = {
-  Videos: [
-    {
-      watermark: "11th JUN 2023",
-      image: imgv1,
-      faintText: <i className="bi bi-play-btn"> 3 videos</i>,
-      darkText: "Apply to enrol in Balance between the Family & Work Workshop",
-      goldText: (
-        <>
-          View Album &nbsp;<i className="bi bi-arrow-right"></i>
-        </>
-      ),
-    },
-    {
-      watermark: "11th JUN 2023",
-      image: imgv2,
-      faintText: <i className="bi bi-play-btn"> 3 videos</i>,
-      darkText: "Apply to enrol in Balance between the Family & Work Workshop",
-      goldText: (
-        <>
-          View Album &nbsp;<i className="bi bi-arrow-right"></i>
-        </>
-      ),
-    },
-    {
-      watermark: "11th JUN 2023",
-      image: imgv3,
-      faintText: <i className="bi bi-play-btn"> 3 videos</i>,
-      darkText: "Apply to enrol in Balance between the Family & Work Workshop ",
-      goldText: (
-        <>
-          View Album &nbsp;<i className="bi bi-arrow-right"></i>
-        </>
-      ),
-    },
-    {
-      watermark: "11th JUN 2023",
-      image: imgv4,
-      faintText: <i className="bi bi-play-btn"> 3 videos</i>,
-      darkText: "Apply to enrol in Balance between the Family & Work Workshop",
-      goldText: (
-        <>
-          View Album &nbsp;<i className="bi bi-arrow-right"></i>
-        </>
-      ),
-    },
-  ],
-
-  News: [
-    {
-      watermark: "11th JUN 2023",
-      image: imgn1,
-      darkText: "Apply to enrol in Balance between the Family & Work ...",
-      faintText:
-        "Name mattis felis id sodais rutrum. Nulla ornare tristique mauris , a loar through th...",
-      goldText: (
-        <>
-          Read More &nbsp;<i className="bi bi-arrow-right"></i>
-        </>
-      ),
-    },
-    {
-      watermark: "11th JUN 2023",
-      image: imgn2,
-      darkText: "Apply to enrol in Balance between the Family & Work ...",
-      faintText:
-        "Name mattis felis id sodais rutrum. Nulla ornare tristique mauris , a loar through th...",
-      goldText: (
-        <>
-          Read More &nbsp;<i className="bi bi-arrow-right"></i>
-        </>
-      ),
-    },
-    {
-      watermark: "11th JUN 2023",
-      image: imgn3,
-      darkText: "Apply to enrol in Balance between the Family & Work ...",
-      faintText:
-        "Name mattis felis id sodais rutrum. Nulla ornare tristique mauris , a loar through th...",
-      goldText: (
-        <>
-          Read More &nbsp;<i className="bi bi-arrow-right"></i>
-        </>
-      ),
-    },
-    {
-      watermark: "11th JUN 2023",
-      image: imgn4,
-      darkText: "Apply to enrol in Balance between the Family & Work ...",
-      faintText:
-        "Name mattis felis id sodais rutrum. Nulla ornare tristique mauris , a loar through th...",
-      goldText: (
-        <>
-          Read More &nbsp;<i className="bi bi-arrow-right"></i>
-        </>
-      ),
-    },
-  ],
-
-  Events: [
-    {
-      watermark: "11th JUN 2023",
-      darkText: "Apply to enrol in Balance between the Family & Work Workshop",
-      faintText: (
-        <>
-          <i className="bi bi-calendar4"> 7/23/2024 11:00:00 AM</i>
-          <br />
-          <i className="bi bi-calendar4"> 7/23/2024 11:00:00 AM</i>
-          <br />
-          <i className="bi bi-slash-square"> Swehan Center</i>
-        </>
-      ),
-      lightText:
-        "Name mattis felis id sodais rutrum. Nulla ornare tristique mauris , a loar through this servic you can benefit from culture,social,health and sports activities .eet erat ornar sit amet",
-      goldText: (
-        <>
-          Read More &nbsp;<i className="bi bi-arrow-right"></i>
-        </>
-      ),
-    },
-    {
-      watermark: "11th JUN 2023",
-      darkText: "Apply to enrol in Balance between the Family & Work Workshop",
-      faintText: (
-        <>
-          <i className="bi bi-calendar4"> 7/23/2024 11:00:00 AM</i>
-          <br />
-          <i className="bi bi-calendar4"> 7/23/2024 11:00:00 AM</i>
-          <br />
-          <i className="bi bi-slash-square"> Swehan Center</i>
-        </>
-      ),
-      lightText:
-        "Name mattis felis id sodais rutrum. Nulla ornare tristique mauris , a loar through this servic you can benefit from culture,social,health and sports activities .eet erat ornar sit amet",
-      goldText: (
-        <>
-          Read More &nbsp;<i className="bi bi-arrow-right"></i>
-        </>
-      ),
-    },
-    {
-      watermark: "11th JUN 2023",
-      darkText: "Apply to enrol in Balance between the Family & Work Workshop",
-      faintText: (
-        <>
-          <i className="bi bi-calendar4"> 7/23/2024 11:00:00 AM</i>
-          <br />
-          <i className="bi bi-calendar4"> 7/23/2024 11:00:00 AM</i>
-          <br />
-          <i className="bi bi-slash-square"> Swehan Center</i>
-        </>
-      ),
-      lightText:
-        "Name mattis felis id sodais rutrum. Nulla ornare tristique mauris , a loar through this servic you can benefit from culture,social,health and sports activities .eet erat ornar sit amet",
-      goldText: (
-        <>
-          Read More &nbsp;<i className="bi bi-arrow-right"></i>
-        </>
-      ),
-    },
-    {
-      watermark: "11th JUN 2023",
-      darkText: "Apply to enrol in Balance between the Family & Work Workshop",
-      faintText: (
-        <>
-          <i className="bi bi-calendar4"> 7/23/2024 11:00:00 AM</i>
-          <br />
-          <i className="bi bi-calendar4"> 7/23/2024 11:00:00 AM</i>
-          <br />
-          <i className="bi bi-slash-square"> Swehan Center</i>
-        </>
-      ),
-      lightText:
-        "Name mattis felis id sodais rutrum. Nulla ornare tristique mauris , a loar through this servic you can benefit from culture,social,health and sports activities .eet erat ornar sit amet",
-      goldText: (
-        <>
-          Read More &nbsp;<i className="bi bi-arrow-right"></i>
-        </>
-      ),
-    },
-  ],
-
-  Gallery: [
-    {
-      watermark: "11th JUN 2023",
-      image: imgg1,
-      faintText: <i className="bi bi-card-image"> 10 Images</i>,
-      darkText: "Apply to enrol in Balance between the Family & Work ...",
-      goldText: (
-        <>
-          View Album &nbsp;<i className="bi bi-arrow-right"></i>
-        </>
-      ),
-    },
-    {
-      watermark: "11th JUN 2023",
-      image: imgg2,
-      faintText: <i className="bi bi-card-image"> 10 Images</i>,
-      darkText: "Apply to enrol in Balance between the Family & Work ...",
-      goldText: (
-        <>
-          View Album &nbsp;<i className="bi bi-arrow-right"></i>
-        </>
-      ),
-    },
-    {
-      watermark: "11th JUN 2023",
-      image: imgg3,
-      faintText: <i className="bi bi-card-image"> 10 Images</i>,
-      darkText: "Apply to enrol in Balance between the Family & Work ...",
-      goldText: (
-        <>
-          View Album &nbsp;<i className="bi bi-arrow-right"></i>
-        </>
-      ),
-    },
-    {
-      watermark: "11th JUN 2023",
-      image: imgg4,
-      faintText: <i className="bi bi-card-image"> 10 Images</i>,
-      darkText: "Apply to enrol in Balance between the Family & Work ...",
-      goldText: (
-        <>
-          View Album &nbsp;<i className="bi bi-arrow-right"></i>
-        </>
-      ),
-    },
-  ],
-};
-
-const items = [
-  { id: 0, title: "Videos" },
-  { id: 1, title: "News" },
-  { id: 2, title: "Events" },
-  { id: 3, title: "Gallery" },
-];
+import "./Media.css";
 
 export default function Media() {
-  const [selectedItem, setSelectedItem] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const timeoutRef = useRef(null);
+  const [currentActive, setcurrentActive] = useState("videos");
+  const [isRightVisible, setIsRightVisible] = useState(false);
+    const [animate, setAnimate] = useState(false);
+  useEffect(() => {
+    setAnimate(false);
+    const timeout = setTimeout(() => setAnimate(true), 50);
+    return () => clearTimeout(timeout);
+  }, [currentActive, isRightVisible]);
 
-  const handleMouseEnter = () => {
-    timeoutRef.current = setTimeout(() => {
-      setIsVisible(true);
-    }, 300);
+  const allCards = {
+    videos: [
+      {
+        id: "cardv1",
+        img: imgv1,
+        date: "11th Jun 2023",
+        title: <i className="bi bi-play-btn"> 3 videos</i>,
+        description:
+          "Apply to enrol in Balance between the Family & Work Workshop",
+        linkText: (
+          <>
+            View Album &nbsp;<i className="bi bi-arrow-right"></i>
+          </>
+        ),
+        linkUrl: "#",
+      },
+      {
+        id: "cardv2",
+        img: imgv2,
+        date: "11th Jun 2023",
+        title: <i className="bi bi-play-btn"> 3 videos</i>,
+        description:
+          "Apply to enrol in Balance between the Family & Work Workshop",
+        linkText: (
+          <>
+            View Album &nbsp;<i className="bi bi-arrow-right"></i>
+          </>
+        ),
+        linkUrl: <i className="bi bi-arrow-right"></i>,
+      },
+      {
+        id: "cardv3",
+        img: imgv3,
+        date: "11th Jun 2023",
+        title: <i className="bi bi-play-btn"> 3 videos</i>,
+        description:
+          "Apply to enrol in Balance between the Family & Work Workshop",
+        linkText: (
+          <>
+            View Album &nbsp;<i className="bi bi-arrow-right"></i>
+          </>
+        ),
+        linkUrl: <i className="bi bi-arrow-right"></i>,
+      },
+      {
+        id: "cardv4",
+        img: imgv4,
+        date: "11th Jun 2023",
+        title: <i className="bi bi-play-btn"> 3 videos</i>,
+        description:
+          "Apply to enrol in Balance between the Family & Work Workshop",
+        linkText: (
+          <>
+            View Album &nbsp;<i className="bi bi-arrow-right"></i>
+          </>
+        ),
+        linkUrl: <i className="bi bi-arrow-right"></i>,
+      },
+    ],
+    news: [
+      {
+        id: "n1",
+        img: imgn1,
+        date: "11th JUN 2023",
+        title1:
+          "Name mattis felis id sodais rutrum. Nulla ornare tristique mauris , a loar through th...",
+        description: "Apply to enrol in Balance between the Family & Work ...",
+        linkText: (
+          <>
+            Read More <i className="bi bi-arrow-right"></i>
+          </>
+        ),
+        linkUrl: "#",
+      },
+      {
+        id: "n2",
+        img: imgn2,
+        date: "11th JUN 2023",
+        title1:
+          "Name mattis felis id sodais rutrum. Nulla ornare tristique mauris , a loar through th...",
+        description: "Apply to enrol in Balance between the Family & Work ...",
+        linkText: (
+          <>
+            Read More <i className="bi bi-arrow-right"></i>
+          </>
+        ),
+        linkUrl: "#",
+      },
+      {
+        id: "n3",
+        img: imgn3,
+        date: "11th JUN 2023",
+        title1:
+          "Name mattis felis id sodais rutrum. Nulla ornare tristique mauris , a loar through th...",
+        description: "Apply to enrol in Balance between the Family & Work ...",
+        linkText: (
+          <>
+            Read More <i className="bi bi-arrow-right"></i>
+          </>
+        ),
+        linkUrl: "#",
+      },
+      {
+        id: "n4",
+        img: imgn4,
+        date: "11th JUN 2023",
+        title1:
+          "Name mattis felis id sodais rutrum. Nulla ornare tristique mauris , a loar through th...",
+        description: "Apply to enrol in Balance between the Family & Work ...",
+        linkText: (
+          <>
+            Read More <i className="bi bi-arrow-right"></i>
+          </>
+        ),
+        linkUrl: "#",
+      },
+    ],
+    events: [
+      {
+        id: "e1",
+        img: imgv1,
+        date: "11th JUN 2023",
+        title1:
+          "Name mattis felis id sodais rutrum. Nulla ornare tristique mauris , a loar through this servic you can benefit from culture,social,health and sports activities .eet erat ornar sit amet",
+        description:
+          "Apply to enrol in Balance between the Family & Work Workshop",
+        faintText: (
+          <>
+            <i className="bi bi-calendar4"> 7/23/2024 11:00:00 AM</i>
+            <br />
+            <i className="bi bi-calendar4"> 7/23/2024 11:00:00 AM</i>
+            <br />
+            <i className="bi bi-slash-square"> Swehan Center</i>
+          </>
+        ),
+        linkText: (
+          <>
+            Read More <i className="bi bi-arrow-right"></i>
+          </>
+        ),
+        linkUrl: "#",
+      },
+      {
+        id: "e2",
+        img: imgv2,
+        date: "11th JUN 2023",
+        title1:
+          "Name mattis felis id sodais rutrum. Nulla ornare tristique mauris , a loar through this servic you can benefit from culture,social,health and sports activities .eet erat ornar sit amet",
+        description:
+          "Apply to enrol in Balance between the Family & Work Workshop",
+        faintText: (
+          <>
+            <i className="bi bi-calendar4"> 7/23/2024 11:00:00 AM</i>
+            <br />
+            <i className="bi bi-calendar4"> 7/23/2024 11:00:00 AM</i>
+            <br />
+            <i className="bi bi-slash-square"> Swehan Center</i>
+          </>
+        ),
+        linkText: (
+          <>
+            Read More <i className="bi bi-arrow-right"></i>
+          </>
+        ),
+        linkUrl: "#",
+      },
+      {
+        id: "e3",
+        img: imgv3,
+        date: "11th JUN 2023",
+        title1:
+          "Name mattis felis id sodais rutrum. Nulla ornare tristique mauris , a loar through this servic you can benefit from culture,social,health and sports activities .eet erat ornar sit amet",
+        description:
+          "Apply to enrol in Balance between the Family & Work Workshop",
+        faintText: (
+          <>
+            <i className="bi bi-calendar4"> 7/23/2024 11:00:00 AM</i>
+            <br />
+            <i className="bi bi-calendar4"> 7/23/2024 11:00:00 AM</i>
+            <br />
+            <i className="bi bi-slash-square"> Swehan Center</i>
+          </>
+        ),
+        linkText: (
+          <>
+            Read More <i className="bi bi-arrow-right"></i>
+          </>
+        ),
+        linkUrl: "#",
+      },
+      {
+        id: "e4",
+        img: imgv4,
+        date: "11th JUN 2023",
+        title1:
+          "Name mattis felis id sodais rutrum. Nulla ornare tristique mauris , a loar through this servic you can benefit from culture,social,health and sports activities .eet erat ornar sit amet",
+        description:
+          "Apply to enrol in Balance between the Family & Work Workshop",
+        faintText: (
+          <>
+            <i className="bi bi-calendar4"> 7/23/2024 11:00:00 AM</i>
+            <br />
+            <i className="bi bi-calendar4"> 7/23/2024 11:00:00 AM</i>
+            <br />
+            <i className="bi bi-slash-square"> Swehan Center</i>
+          </>
+        ),
+        linkText: (
+          <>
+            Read More <i className="bi bi-arrow-right"></i>
+          </>
+        ),
+        linkUrl: "#",
+      },
+    ],
+    gallery: [
+      {
+        id: "g1",
+        img: imgg1,
+        date: "11th JUN 2023",
+        title: <i className="bi bi-card-image"> 10 Images</i>,
+        description: "Apply to enrol in Balance between the Family & Work ...",
+        linkText: (
+          <>
+            View Album &nbsp;<i className="bi bi-arrow-right"></i>
+          </>
+        ),
+
+        linkUrl: "#",
+      },
+      {
+        id: "g2",
+        img: imgg2,
+        date: "11th JUN 2023",
+        title: <i className="bi bi-card-image"> 10 Images</i>,
+        description: "Apply to enrol in Balance between the Family & Work ...",
+        linkText: (
+          <>
+            View Album &nbsp;<i className="bi bi-arrow-right"></i>
+          </>
+        ),
+
+        linkUrl: "#",
+      },
+      {
+        id: "g3",
+        img: imgg3,
+        date: "11th JUN 2023",
+        title: <i className="bi bi-card-image"> 10 Images</i>,
+        description: "Apply to enrol in Balance between the Family & Work ...",
+        linkText: (
+          <>
+            View Album &nbsp;<i className="bi bi-arrow-right"></i>
+          </>
+        ),
+
+        linkUrl: "#",
+      },
+      {
+        id: "g4",
+        img: imgg4,
+        date: "11th JUN 2023",
+        title: <i className="bi bi-card-image"> 10 Images</i>,
+        description: "Apply to enrol in Balance between the Family & Work ...",
+        linkText: (
+          <>
+            View Album &nbsp;<i className="bi bi-arrow-right"></i>
+          </>
+        ),
+
+        linkUrl: "#",
+      },
+    ],
   };
-
-  const handleMouseLeave = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
-    }
-  };
-
-  const handleSelect = (index) => {
-    setIsVisible(false);
-    setTimeout(() => {
-      setSelectedItem(index);
-      setIsVisible(true);
-    }, 300);
-  };
-
-  const selectedTitle = items[selectedItem].title;
-  const data = contentData[selectedTitle];
 
   return (
-    <div>
-      <div
-        className="container"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div className="row justify-content-between align-items-center">
-          <div className="col-md-8 col-12">
-            <div className="media-h">
-              <span className="typewriter-wrapper">
-                <Typewriter
-                  words={["MEDIA CENTER"]}
-                  loop={0}
-                  typeSpeed={150}
-                  deleteSpeed={150}
-                  cursor
-                  cursorStyle=""
-                />
-              </span>
-            </div>
-            <div className="media-h1">
-              <h1>Media Center</h1>
-            </div>
-          </div>
-          <div
-            className="col-md-4 col-12 text-md-end text-center"
-            id="media-btn"
-          >
-            <button className="view-all-btn">
-              View All <i className="bi bi-chevron-compact-right"></i>
-            </button>
-          </div>
-        </div>
+    <div className="sec-media" onMouseEnter={() => setIsRightVisible(true)}>
+      <div className="left-sec ">
+        <button
+          onClick={() => setcurrentActive("videos")}
+          className={currentActive === "videos" ? "active" : null}
+        >
+          videos
+        </button>
 
-        <div className="sec-media">
-          <div className="hover-section">
-            <div className="left-section">
-              {items.map((item, index) => (
-                <div
-                  key={item.id}
-                  className={`left-item ${
-                    selectedItem === index ? "active" : ""
-                  }`}
-                  onClick={() => handleSelect(index)}
-                >
-                  {item.title}
-                </div>
-              ))}
-            </div>
-
-            <div className={`right-section ${isVisible ? "show" : ""}`}>
-              <div
-                className={`grid-container ${
-                  isVisible ? "fade-in" : "fade-out"
-                }`}
-                key={selectedTitle}
-              >
-                {selectedTitle === "Events" &&
-                  data.map((d, i) => (
-                    <div key={i} className="grid-item">
-                      <div className="watermark">{d.watermark}</div>
-                      <p className="dark-text1">{d.darkText}</p>
-                      <p className="faint-text1">{d.faintText}</p>
-                      <p className="light-text1">{d.lightText}</p>
-                      <p className="gold-text1">{d.goldText}</p>
-                    </div>
-                  ))}
-
-                {selectedTitle === "News" &&
-                  data.map((d, i) => (
-                    <div key={i} className="grid-item">
-                      <div className="watermark">{d.watermark}</div>
-                      <img src={d.image} alt={d.watermark} />
-                      <p className="dark-text">{d.darkText}</p>
-                      <p className="faint-text">{d.faintText}</p>
-                      <p className="gold-text">{d.goldText}</p>
-                    </div>
-                  ))}
-
-                {selectedTitle !== "News" &&
-                  selectedTitle !== "Events" &&
-                  data.map((d, i) => (
-                    <div key={i} className="grid-item" >
-                      <div className="watermark">{d.watermark}</div>
-                      <img src={d.image} alt={d.watermark} />
-                      <p className="faint-text">{d.faintText}</p>
-                      <p className="dark-text">{d.darkText}</p>
-                      <p className="gold-text">{d.goldText}</p>
-                    </div>
-                  ))}
-              </div>
-            </div>
-          </div>
-        </div>
+        <button
+          onClick={() => {
+            setcurrentActive("news");
+          }}
+          className={currentActive === "news" ? "active" : null}
+        >
+          news
+        </button>
+        <button
+          onClick={() => {
+            setcurrentActive("events");
+          }}
+          className={currentActive === "events" ? "active" : null}
+        >
+          events
+        </button>
+        <button
+          onClick={() => {
+            setcurrentActive("gallery");
+          }}
+          className={currentActive === "gallery" ? "active" : null}
+        >
+          gallery
+        </button>
       </div>
+<div className={`right-sectionm  ${isRightVisible ? "visible" : ""}`}>
+<Slider
+  dots={true}
+  infinite={true}
+  speed={500}
+  slidesToShow={4}
+  slidesToScroll={1}
+  autoplay={true}
+  autoplaySpeed={3000}
+  centerMode={false} 
+  responsive={[
+    { breakpoint: 1024, settings: { slidesToShow: 3 } },
+    { breakpoint: 768, settings: { slidesToShow: 1 } },
+  ]}
+>
+
+    {allCards[currentActive]?.map((card) => (
+      <div key={card.id} className="cardi">
+        <article className={`card ${animate ? "animate" : ""}`}>
+          {(currentActive === "videos" || currentActive === "gallery") && (
+            <>
+              <span className="watermark">{card.date}</span>
+              <img src={card.img} alt="" />
+              <div className="box">
+                <h5 className="title">{card.title}</h5>
+                <p className="dark-text">{card.description}</p>
+                <a href={card.linkUrl} className="gold-text">
+                  {card.linkText}
+                </a>
+              </div>
+            </>
+          )}
+
+          {currentActive === "news" && (
+            <>
+              <span className="watermark">{card.date}</span>
+              <img src={card.img} alt="" />
+              <div className="box">
+                <p className="dark-text">{card.description}</p>
+                <h5 className="title">{card.title1}</h5>
+                <a href={card.linkUrl} className="gold-text">
+                  {card.linkText}
+                </a>
+              </div>
+            </>
+          )}
+
+          {currentActive === "events" && (
+            <>
+              <span className="watermark">{card.date}</span>
+              <div className="box">
+                <p className="dark-text">{card.description}</p>
+                <p className="title1">{card.faintText}</p>
+                <h5 className="light-text1">{card.title1}</h5>
+                <a href={card.linkUrl} className="gold-text">
+                  {card.linkText}
+                </a>
+              </div>
+            </>
+          )}
+        </article>
+      </div>
+    ))}
+  </Slider>
+</div>
+
     </div>
   );
 }

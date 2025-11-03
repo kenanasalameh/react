@@ -1,12 +1,12 @@
-#aboutus{
-  margin-top: 25rem;
+#aboutus {
+  min-height: 200px;
 }
 
 .about-h {
   margin-top: 45px;
   font-size: 70px;
   font-weight: bold;
-    font-family: 'Helvetica LT Std', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color: rgba(153, 152, 151, 0.12);
   position: relative;
@@ -15,7 +15,7 @@
 .about-h1 h1 {
   font-size: 40px;
   margin-left: 10px;
-    font-family: 'Helvetica LT Std', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
   font-weight: bold;
   padding-left: 40px;
   position: absolute;
@@ -27,16 +27,9 @@
   min-width: 100px;
 }
 
-
-#media-
-
-{
-  margin-top: 30px;
-}
-
 .view-all-btn {
   font-size: small;
-    font-family: 'Helvetica LT Std', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
   background-color: white;
   border: none;
 }
@@ -50,14 +43,14 @@
   margin-left: 45px;
   max-width: 800px;
   font-size: 18px;
-    font-family: 'Helvetica LT Std', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
   color: #444;
 }
 
 .about-p,
 .about-p1,
 .about-p2 {
-    font-family: 'Helvetica LT Std', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
   font-size: 12px;
   margin-bottom: 50px;
 }
@@ -65,7 +58,7 @@
 .about-p1 b,
 .about-p2 b {
   font-weight: bold;
-    font-family: 'Helvetica LT Std', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
   color: var(-dark--color);
 }
 
@@ -94,7 +87,6 @@
   width: 8%;
   height: 2px;
   background-color: var(--light--brown);
-  
 }
 
 .span-p2 {
@@ -126,19 +118,17 @@
   z-index: 1;
 }
 
-
 .about-image-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  width: 300px; 
-  clip-path: inset(0 50% 0 50%); 
+  width: 300px;
+  clip-path: inset(0 50% 0 50%);
   transition: clip-path 1.2s ease;
   pointer-events: none;
 }
-
 
 .about-image.visible .about-image-text {
   clip-path: inset(0 0 0 0);
@@ -149,33 +139,3 @@
   height: auto;
   display: block;
 }
-@media (max-width:1199px) {
-
-#aboutus{
-  margin-top: 35rem;
-}
-
-
-}
-@media (max-width:991px) {
-
-#aboutus{
-  margin-top: 45rem;
-}
-
-
-}
-@media (max-width:768px) {
-
-.img-fluid{
- margin-top: 5rem;
-}
-
-}
-@media (max-width:767px) {
-
-#aboutus{
-  margin-top: 90rem;
-}
-}
-

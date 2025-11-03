@@ -16,7 +16,9 @@
   float: inline-end;
   color: white;
 }
-
+.bi-chevron-double-up::before{
+  margin-left: 1rem;
+}
 .p1 {
   font-weight: bold;
   font-size: 11px;
