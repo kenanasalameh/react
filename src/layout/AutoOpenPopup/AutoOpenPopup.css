@@ -1,17 +1,7 @@
 .popup-overlay {
   z-index: 9999 !important;
 }
-.constyle{
-    
-        background: transparent;
-        border: none;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content:center;
-        min-height: 100vh,
-    
-}
+
 
 .full-modal-content {
   padding: 30px;
@@ -70,6 +60,25 @@
   outline: none !important;
   box-shadow: none !important;
 }
+/* إزالة الحواف والخلفية التابعة للمكتبة */
+.popup-content {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+/* خلفية التعتيم */
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.55) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
 
 @keyframes slideUp {
   from {

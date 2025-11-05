@@ -29,26 +29,27 @@ function FullModalPopup() {
       modal
       closeOnDocumentClick={false}
       onClose={() => setOpen(false)}
-      contentStyleClassName="constyle"
-
-    overlayClassName="popup-overlay"
+      overlayClassName="popup-overlay"
     >
       <div className="full-modal-content">
         <button
           type="button"
-          class="btnm"
+          className="btnm"
           aria-label="Close"
           onClick={() => setOpen(false)}
         >
-          <i class="bi bi-x-lg"></i>
+          <i className="bi bi-x-lg"></i>
         </button>
 
-        <h5 className="h2">Welcome to Family Development<br/> Foundation</h5>
+        <h5 className="h2">
+          Welcome to Family Development <br /> Foundation
+        </h5>
         <p>
           This quick tour will guid you throught the key features <br />
           of our platform, helping you navigate with ease and <br />
           make the modt of your experience.
         </p>
+
         <div className="btt">
           <button className="bt1">Start Tour</button>
           <button className="bt" onClick={() => setOpen(false)}>
