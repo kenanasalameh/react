@@ -52,7 +52,7 @@ button {
 
 .right-sectionm {
  opacity: 0;
-  width: 100%;
+  width: 80%;
   margin-top: 4%;
 
 
@@ -158,12 +158,24 @@ button {
 }
 @media (max-width:768px) {
 .card{
-  width: 40%;
+  width: 60%;
   margin-left: 5rem;
   margin-top: 2rem;
 }
 .slick-prev:before, .slick-next:before {
   opacity: 0;
+}
+.right-sectionm{
+  width: 60%;
+}
+}
+@media (max-width:440px) {
+
+.slick-prev:before, .slick-next:before {
+  opacity: 0;
+}
+.right-sectionm{
+  width: 60%;
 }
 }
 

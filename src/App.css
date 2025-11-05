@@ -32,6 +32,27 @@
 body {
   font-family: 'Helvetica LT Std', Helvetica, Arial, sans-serif;
 }
+@media (max-width:768px) {
+  .about-h,.achiv-h,.contact-h,.prog-h ,.serv-h {
+
+  font-size:3rem !important;
+
+}
+
+.about-h1 h1,.achiv-h1 h1,.contact-h1 h1,.prog-h1 h1,.serv-h1 h1  {
+  font-size:1.7rem  !important;
+  margin-top: -3.5rem !important;
+
+}}
+@media (max-width:768px) {
+  
+.view-all-btn {
+
+  margin-top: 4.5rem !important;
+  font-size: x-small !important;
+}
+}
+
 
 
 

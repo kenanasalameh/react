@@ -9,162 +9,174 @@ function Header() {
   const [openMenu, setOpenMenu] = useState();
 
   return (
-    <div className="header">
-      <Navbar collapseOnSelect expand="lg">
+    <div className="header row  col-12">
+      <Navbar className="n">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="#home" className="col-2">
             <img src={logo} alt="logo" className="logoh" />
           </Navbar.Brand>
-
-          <Nav className="me-auto navs1-container">
-            <Nav.Link href="#" className="navs1" id="f1">
-              <i className="bi bi-telephone-fill" id="i"></i>
-              &nbsp;&nbsp;971&nbsp;2&nbsp;4476900
-            </Nav.Link>
-            <Nav.Link href="#" className="navs1" id="f">
-              <i className="bi bi-envelope-fill" id="i"></i>
-              &nbsp;&nbsp;info@fdf.gov.ae
-            </Nav.Link>
-          </Nav>
-
-          <Navbar.Toggle
-            aria-controls="responsive-navbar-nav"
-            className="white-toggler"
-          />
-
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav>
-              <Nav.Link href="#" className="navs2li">
+          <Nav className="mainnav col-7">
+            <Nav className="me-auto my-nav">
+              <Nav.Link href="#" className="nav-icon">
                 <i className="bi bi-search" id="search"></i>
               </Nav.Link>
-              <Nav.Link href="#" className="navs2li">
-                <b id="search">عربي</b>
+              <Nav.Link href="#" className="nav-lang" id="search">
+                <b>عربي</b>
               </Nav.Link>
-              <Nav.Link href="#" className="navs2li">
+              <Nav.Link href="#" className="nav-setting">
                 Setting
               </Nav.Link>
-              <Nav.Link href="#" className="navs2li navs2lip">
+            </Nav>
+
+            <Nav className="me-auto my-nav1">
+              <Nav.Link href="#" className="navs1" id="f1">
                 <i className="bi bi-telephone-fill" id="i"></i>
                 &nbsp;&nbsp;971&nbsp;2&nbsp;4476900
               </Nav.Link>
-              <Nav.Link href="#" className="navs2li navs2lip">
+              <Nav.Link href="#" className="navs1" id="f">
                 <i className="bi bi-envelope-fill" id="i"></i>
                 &nbsp;&nbsp;info@fdf.gov.ae
               </Nav.Link>
-              <Nav.Link href="#" className="navs2li navs2lii1 search">
+            </Nav>
+            <Nav className="me-auto my-nav2" id="nav3">
+              <Nav.Link href="#" id="search1">
                 Al Dhabianiya Private School
               </Nav.Link>
-              <Nav.Link href="#" className="navs2li navs2lii">
-                Al Bateen Scientific Private School
-              </Nav.Link>
+              <Nav.Link href="#">Al Bateen Scientific Private School</Nav.Link>
             </Nav>
-          </Navbar.Collapse>
+          </Nav>
         </Container>
       </Navbar>
-      {/* nav2 */}
+
       <Container>
         <div
-          className={`nav2-row ${openMenu ? `open-${openMenu}` : ""}`}
+          className={`nav2-row col-10  offset-md-1 ${
+            openMenu ? `open-${openMenu}` : ""
+          }`}
           onMouseLeave={() => setOpenMenu()}
         >
-          <ul class="nav justify-content-start" id="nav2">
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                <i className="fa-solid fa-house"></i> Home
-              </a>
-            </li>
-            <li
-              className={`nav-item nav-item-dropdown ${
-                openMenu === "about" ? "active" : ""
-              }`}
-              onMouseEnter={() => setOpenMenu("about")}
-            >
-              <a className="nav-link" href="#">
-                About FDF{" "}
-                <i className="fa-solid fa-angle-down dropdown-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                FDF Centers
-              </a>
-            </li>
-            <li
-              className={`nav-item nav-item-dropdown ${
-                openMenu === "services" ? "active" : ""
-              }`}
-              onMouseEnter={() => setOpenMenu("services")}
-            >
-              <a className="nav-link" href="#">
-                Services Manual{" "}
-                <i className="fa-solid fa-angle-down dropdown-icon"></i>
-              </a>
-            </li>
-            <li
-              className={`nav-item nav-item-dropdown ${
-                openMenu === "tenders" ? "active" : ""
-              }`}
-              onMouseEnter={() => setOpenMenu("tenders")}
-            >
-              <a className="nav-link" href="#">
-                Tenders and Auction{" "}
-                <i className="fa-solid fa-angle-down dropdown-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Social Programs
-              </a>
-            </li>
-            <li
-              className={`nav-item nav-item-dropdown ${
-                openMenu === "publications" ? "active" : ""
-              }`}
-              onMouseEnter={() => setOpenMenu("publications")}
-            >
-              <a className="nav-link" href="#">
-                Publications{" "}
-                <i className="fa-solid fa-angle-down dropdown-icon"></i>
-              </a>
-            </li>
-            <li
-              className={`nav-item nav-item-dropdown ${
-                openMenu === "openData" ? "active" : ""
-              }`}
-              onMouseEnter={() => setOpenMenu("openData")}
-            >
-              <a className="nav-link" href="#">
-                Open Data
-                <i className="fa-solid fa-angle-down dropdown-icon"></i>
-              </a>
-            </li>
-            <li
-              className={`nav-item nav-item-dropdown ${
-                openMenu === "media" ? "active" : ""
-              }`}
-              onMouseEnter={() => setOpenMenu("media")}
-            >
-              <a className="nav-link" href="#">
-                Media Center
-                <i className="fa-solid fa-angle-down dropdown-icon"></i>
-              </a>
-            </li>
+          <Navbar
+            expand="xl"
+            className="nav2-bar"
+            onMouseLeave={() => setOpenMenu()}
+          >
+            <Navbar.Toggle aria-controls="nav2-collapse" />
+            <i className="fa-solid fa-house" id="house"></i>
+            <span className="iconh">
+              <i className="bi bi-search"></i>
+            <i class="fa-solid fa-globe" ></i>
+            <i class="fa-solid fa-gear"></i>
+            </span>
+            <Navbar.Collapse id="nav2-collapse">
+              <ul className="nav justify-content-start" id="nav2">
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
+                    <i className="fa-solid fa-house"></i> Home
+                  </a>
+                </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Recruitment
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Contact Us
-              </a>
-            </li>
-          </ul>
+                <li
+                  className={`nav-item nav-item-dropdown ${
+                    openMenu === "about" ? "active" : ""
+                  }`}
+                  onMouseEnter={() => setOpenMenu("about")}
+                >
+                  <a className="nav-link" href="#">
+                    About FDF{" "}
+                    <i className="fa-solid fa-angle-down dropdown-icon"></i>
+                  </a>
+                </li>
+
+                <li className="nav-item">
+                  <a className="nav-link" href="#" id="s">
+                    FDF Centers
+                  </a>
+                </li>
+
+                <li
+                  className={`nav-item nav-item-dropdown ${
+                    openMenu === "services" ? "active" : ""
+                  }`}
+                  onMouseEnter={() => setOpenMenu("services")}
+                >
+                  <a className="nav-link" href="#">
+                    Services Manual{" "}
+                    <i className="fa-solid fa-angle-down dropdown-icon"></i>
+                  </a>
+                </li>
+
+                <li
+                  className={`nav-item nav-item-dropdown ${
+                    openMenu === "tenders" ? "active" : ""
+                  }`}
+                  onMouseEnter={() => setOpenMenu("tenders")}
+                >
+                  <a className="nav-link" href="#">
+                    Tenders and Auction{" "}
+                    <i className="fa-solid fa-angle-down dropdown-icon"></i>
+                  </a>
+                </li>
+
+                <li className="nav-item">
+                  <a className="nav-link" href="#" id="s">
+                    Social Programs
+                  </a>
+                </li>
+
+                <li
+                  className={`nav-item nav-item-dropdown ${
+                    openMenu === "publications" ? "active" : ""
+                  }`}
+                  onMouseEnter={() => setOpenMenu("publications")}
+                >
+                  <a className="nav-link" href="#">
+                    Publications{" "}
+                    <i className="fa-solid fa-angle-down dropdown-icon"></i>
+                  </a>
+                </li>
+
+                <li
+                  className={`nav-item nav-item-dropdown ${
+                    openMenu === "openData" ? "active" : ""
+                  }`}
+                  onMouseEnter={() => setOpenMenu("openData")}
+                >
+                  <a className="nav-link" href="#">
+                    Open Data{" "}
+                    <i className="fa-solid fa-angle-down dropdown-icon"></i>
+                  </a>
+                </li>
+
+                <li
+                  className={`nav-item nav-item-dropdown ${
+                    openMenu === "media" ? "active" : ""
+                  }`}
+                  onMouseEnter={() => setOpenMenu("media")}
+                >
+                  <a className="nav-link" href="#">
+                    Media Center{" "}
+                    <i className="fa-solid fa-angle-down dropdown-icon"></i>
+                  </a>
+                </li>
+
+                <li className="nav-item">
+                  <a className="nav-link" href="#" id="s">
+                    Recruitment
+                  </a>
+                </li>
+
+                <li className="nav-item">
+                  <a className="nav-link" href="#" id="s">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </Navbar.Collapse>
+          </Navbar>
           {openMenu === "about" && (
             <div className="submenu about-submenu">
               <div className="container text-center">
-                <div className="row row-cols-4 rowt" >
+                <div className="row row-cols-4 rowt">
                   <div className="col-2 f">Supreme Head</div>
                   <div className="col-2 f">
                     Words of the Chairman of the Boards of Trustees

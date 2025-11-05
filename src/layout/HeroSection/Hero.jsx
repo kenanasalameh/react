@@ -56,7 +56,8 @@ const Gallery = () => {
   }, [currentIndex]);
 
   return (
-    <Carousel
+    <div className="hero">
+          <Carousel
       showArrows={currentIndex !== 2 && showControls}
       showIndicators={currentIndex !== 2 && showControls}
       autoPlay={true}
@@ -105,6 +106,8 @@ const Gallery = () => {
         </div>
       ))}
     </Carousel>
+    </div>
+
   );
 };
 

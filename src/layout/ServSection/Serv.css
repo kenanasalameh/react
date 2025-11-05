@@ -9,6 +9,7 @@
   min-height: 200px;
 }
 
+
 .sec-serv {
   opacity: 0;
   visibility: hidden;
@@ -44,16 +45,20 @@
   z-index: 10;
   margin-top: -70px;
 }
-
-#serv-btn {
-  margin-top: 30px;
+.par{
+  display: flex;
+  flex-direction:row;
+  justify-content:space-between;
 }
+
+
 
 .view-all-btn {
   font-size: small;
   font-family: "Helvetica LT Std", Helvetica, Arial, sans-serif;
   background-color: white;
   border: none;
+  margin-top: 6rem;
 }
 
 .box-grid {

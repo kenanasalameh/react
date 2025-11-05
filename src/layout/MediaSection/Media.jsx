@@ -1,8 +1,8 @@
-import React, { useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { Typewriter } from "react-simple-typewriter";
 
 import imgv1 from "../../asset/imgv1.jpg";
 import imgv2 from "../../asset/imgv2.jpg";
@@ -22,7 +22,7 @@ import "./Media.css";
 export default function Media() {
   const [currentActive, setcurrentActive] = useState("videos");
   const [isRightVisible, setIsRightVisible] = useState(false);
-    const [animate, setAnimate] = useState(false);
+  const [animate, setAnimate] = useState(false);
   useEffect(() => {
     setAnimate(false);
     const timeout = setTimeout(() => setAnimate(true), 50);
@@ -305,106 +305,128 @@ export default function Media() {
   };
 
   return (
-    <div className="sec-media" onMouseEnter={() => setIsRightVisible(true)}>
-      <div className="left-sec ">
-        <button
-          onClick={() => setcurrentActive("videos")}
-          className={currentActive === "videos" ? "active" : null}
-        >
-          videos
-        </button>
-
-        <button
-          onClick={() => {
-            setcurrentActive("news");
-          }}
-          className={currentActive === "news" ? "active" : null}
-        >
-          news
-        </button>
-        <button
-          onClick={() => {
-            setcurrentActive("events");
-          }}
-          className={currentActive === "events" ? "active" : null}
-        >
-          events
-        </button>
-        <button
-          onClick={() => {
-            setcurrentActive("gallery");
-          }}
-          className={currentActive === "gallery" ? "active" : null}
-        >
-          gallery
-        </button>
+    <div>
+      <div className="container">
+        <div className="row justify-content-between align-items-center">
+          <div className="col-md-8 col-12">
+            <div className="achiv-h">
+              <span className="typewriter-wrapper">
+                <Typewriter
+                  words={["MEDIA CENTER"]}
+                  loop={0}
+                  typeSpeed={150}
+                  deleteSpeed={150}
+                  cursor
+                  cursorStyle=""
+                />
+              </span>
+            </div>
+            <div className="achiv-h1">
+              <h1>Media Center</h1>
+            </div>
+          </div>
+        </div>
       </div>
-<div className={`right-sectionm  ${isRightVisible ? "visible" : ""}`}>
-<Slider
-  dots={true}
-  infinite={true}
-  speed={500}
-  slidesToShow={4}
-  slidesToScroll={1}
-  autoplay={true}
-  autoplaySpeed={3000}
-  centerMode={false} 
-  responsive={[
-    { breakpoint: 1024, settings: { slidesToShow: 3 } },
-    { breakpoint: 768, settings: { slidesToShow: 1 } },
-  ]}
->
+      <div className="sec-media" onMouseEnter={() => setIsRightVisible(true)}>
+        <div className="left-sec ">
+          <button
+            onClick={() => setcurrentActive("videos")}
+            className={currentActive === "videos" ? "active" : null}
+          >
+            videos
+          </button>
 
-    {allCards[currentActive]?.map((card) => (
-      <div key={card.id} className="cardi">
-        <article className={`card ${animate ? "animate" : ""}`}>
-          {(currentActive === "videos" || currentActive === "gallery") && (
-            <>
-              <span className="watermark">{card.date}</span>
-              <img src={card.img} alt="" />
-              <div className="box">
-                <h5 className="title">{card.title}</h5>
-                <p className="dark-text">{card.description}</p>
-                <a href={card.linkUrl} className="gold-text">
-                  {card.linkText}
-                </a>
-              </div>
-            </>
-          )}
+          <button
+            onClick={() => {
+              setcurrentActive("news");
+            }}
+            className={currentActive === "news" ? "active" : null}
+          >
+            news
+          </button>
+          <button
+            onClick={() => {
+              setcurrentActive("events");
+            }}
+            className={currentActive === "events" ? "active" : null}
+          >
+            events
+          </button>
+          <button
+            onClick={() => {
+              setcurrentActive("gallery");
+            }}
+            className={currentActive === "gallery" ? "active" : null}
+          >
+            gallery
+          </button>
+        </div>
+        <div className={`right-sectionm  ${isRightVisible ? "visible" : ""}`}>
+          <Slider
+            dots={true}
+            infinite={true}
+            speed={500}
+            slidesToShow={4}
+            slidesToScroll={1}
+            autoplay={true}
+            autoplaySpeed={3000}
+            centerMode={false}
+            responsive={[
+              { breakpoint: 1024, settings: { slidesToShow: 3 } },
+              { breakpoint: 768, settings: { slidesToShow: 1 } },
+            ]}
+          >
+            {allCards[currentActive]?.map((card) => (
+              <div key={card.id} className="cardi">
+                <article className={`card ${animate ? "animate" : ""}`}>
+                  {(currentActive === "videos" ||
+                    currentActive === "gallery") && (
+                    <>
+                      <span className="watermark">{card.date}</span>
+                      <img src={card.img} alt="" />
+                      <div className="box">
+                        <h5 className="title">{card.title}</h5>
+                        <p className="dark-text">{card.description}</p>
+                        <a href={card.linkUrl} className="gold-text">
+                          {card.linkText}
+                        </a>
+                      </div>
+                    </>
+                  )}
 
-          {currentActive === "news" && (
-            <>
-              <span className="watermark">{card.date}</span>
-              <img src={card.img} alt="" />
-              <div className="box">
-                <p className="dark-text">{card.description}</p>
-                <h5 className="title">{card.title1}</h5>
-                <a href={card.linkUrl} className="gold-text">
-                  {card.linkText}
-                </a>
-              </div>
-            </>
-          )}
+                  {currentActive === "news" && (
+                    <>
+                      <span className="watermark">{card.date}</span>
+                      <img src={card.img} alt="" />
+                      <div className="box">
+                        <p className="dark-text">{card.description}</p>
+                        <h5 className="title">{card.title1}</h5>
+                        <a href={card.linkUrl} className="gold-text">
+                          {card.linkText}
+                        </a>
+                      </div>
+                    </>
+                  )}
 
-          {currentActive === "events" && (
-            <>
-              <span className="watermark">{card.date}</span>
-              <div className="box">
-                <p className="dark-text">{card.description}</p>
-                <p className="title1">{card.faintText}</p>
-                <h5 className="light-text1">{card.title1}</h5>
-                <a href={card.linkUrl} className="gold-text">
-                  {card.linkText}
-                </a>
+                  {currentActive === "events" && (
+                    <>
+                      <span className="watermark">{card.date}</span>
+                      <div className="box">
+                        <p className="dark-text">{card.description}</p>
+                        <p className="title1">{card.faintText}</p>
+                        <h5 className="light-text1">{card.title1}</h5>
+                        <a href={card.linkUrl} className="gold-text">
+                          {card.linkText}
+                        </a>
+                      </div>
+                    </>
+                  )}
+                </article>
               </div>
-            </>
-          )}
-        </article>
+            ))}
+          </Slider>
+        </div>
       </div>
-    ))}
-  </Slider>
-</div>
-
     </div>
   );
 }

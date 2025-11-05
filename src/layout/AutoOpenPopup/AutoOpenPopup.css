@@ -1,0 +1,83 @@
+.popup-overlay {
+  z-index: 9999 !important;
+}
+.constyle{
+    
+        background: transparent;
+        border: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        min-height: 100vh,
+    
+}
+
+.full-modal-content {
+  padding: 30px;
+  text-align: start;
+  background-image: url("../../asset/modal.jpg"), url("../../asset/backm2.png");
+  background-position: center;
+  background-size: cover, cover;
+  background-position: center -10px;
+  border-radius: 12px;
+  width: 75%;
+  height: 280px;
+  margin: auto;
+  animation: slideUp 1s ease-out;
+}
+.h2 {
+  margin-top: 1.5rem !important;
+  color: var(--bg--nav) !important;
+  font-weight: bold !important;
+  font-size: x-large !important;
+}
+.full-modal-content p {
+  font-size: small;
+  margin-top: 1rem;
+  color: var(--liner--after);
+}
+
+.bt {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: small;
+  margin-left: 2rem;
+  background-color: none;
+  border-radius: 50px;
+  border: 1px solid;
+  border-color: var(--light--brown);
+  color: var(--light--brown);
+}
+.bt1 {
+  margin-top: 20px;
+  font-size: small;
+  padding: 10px 20px;
+
+  background-color: var(--light--brown);
+  border-radius: 50px;
+  border: 1px solid;
+  border-color: var(--light--brown);
+  color: white;
+}
+.btnm {
+  background-color: unset !important;
+  color: var(--light--brown) !important;
+  float: right;
+}
+.btnm:focus,
+.btnm:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

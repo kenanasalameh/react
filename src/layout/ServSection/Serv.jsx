@@ -93,9 +93,10 @@ export default function Serv() {
   return (
     <div className="serv">
       <div className="container" onMouseEnter={handleMouseEnter}>
-        <div className="row justify-content-between align-items-center">
-          <div className="col-md-8 col-12">
-            <div className="serv-h">
+        <div>
+          <div className="par">
+            <div className="tit">
+                <div className="serv-h">
               <span className="typewriter-wrapper">
                 <Typewriter
                   words={["SERVICES"]}
@@ -110,15 +111,13 @@ export default function Serv() {
             <div className="serv-h1">
               <h1>Electronic Services</h1>
             </div>
-          </div>
-
-          <div
-            className="col-md-4 col-12 text-md-end text-center"
-            id="serv-btn"
-          >
-            <button className="view-all-btn">
-              View All <i className="bi bi-chevron-compact-right"></i>
-            </button>
+            </div>
+          
+            <div>
+              <button className="view-all-btn  ">
+                View All <i className="bi bi-chevron-compact-right"></i>
+              </button>
+            </div>
           </div>
         </div>
 
