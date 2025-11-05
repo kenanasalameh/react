@@ -60,7 +60,7 @@
   outline: none !important;
   box-shadow: none !important;
 }
-/* إزالة الحواف والخلفية التابعة للمكتبة */
+
 .popup-content {
   background: transparent !important;
   border: none !important;
@@ -68,7 +68,7 @@
   box-shadow: none !important;
 }
 
-/* خلفية التعتيم */
+
 .popup-overlay {
   background: rgba(0, 0, 0, 0.55) !important;
   display: flex;
